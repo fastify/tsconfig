@@ -35,4 +35,6 @@ The configuration targets es2018, that is supported in Node.js 10 and later. The
 
 Licensed under [MIT](./LICENSE).
 
-## Inspired by: [sindresorhus/tsconfig](https://github.com/sindresorhus/tsconfig)
+---
+
+Inspired by: [sindresorhus/tsconfig](https://github.com/sindresorhus/tsconfig)
