@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "target": "es2018", // 92% Node.js 10 (https://node.green/)
+    "target": "es2018",
     "module": "commonjs",
     "moduleResolution": "node",
     "declaration": true,
@@ -17,6 +17,6 @@
     "skipLibCheck": true,
     "lib": [
       "esnext"
-    ],
+    ]
   }
 }
