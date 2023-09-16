@@ -1,6 +1,6 @@
 {
   "name": "fastify-tsconfig",
-  "version": "1.0.1",
+  "version": "2.0.0",
   "description": "Shared TypeScript configuration",
   "license": "MIT",
   "repository": {
@@ -14,7 +14,7 @@
   },
   "main": "tsconfig.json",
   "engines": {
-    "node": ">=10.4.0"
+    "node": ">=16.13.2"
   },
   "files": [
     "tsconfig.json"

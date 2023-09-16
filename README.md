@@ -10,18 +10,53 @@ $ npm install --save-dev fastify-tsconfig
 
 ## Usage
 
-Extend your own `tsconfig.json` file from `fastify-tsconfig` and override/add the desired settings. By default no `outDir` is set (because of [this issue](https://github.com/Microsoft/TypeScript/issues/29172)) , so be sure to add one.
+Create your own `tsconfig.json` in the projects' root folder and extend it from `fastify-tsconfig`, overriding or adding the desired settings. By default, no `outDir` is set (because of [this issue](https://github.com/Microsoft/TypeScript/issues/29172)), so be sure to add one.
 
+Depending on the type of the project, you should add the following settings.
+
+### Application
+`tsconfig.json`
+```json
+{
+ "extends": "fastify-tsconfig",
+ "compilerOptions": {
+ "outDir": "dist",
+ "sourceMap": true
+ },
+ "include": [
+ "src/**/*.ts"
+ ]
+}
+```
+### Package
 `tsconfig.json`
 
 ```json
 {
-  "extends": "fastify-tsconfig",
-  "compilerOptions": {
-    "outDir": "build",
-    "target": "es2018",
-    "lib": ["es2018"]
-  }
+ "extends": "fastify-tsconfig",
+ "compilerOptions": {
+ "outDir": "dist",
+ "declaration": true
+ },
+ "include": [
+ "src/**/*.ts"
+ ]
+}
+```
+### Monorepo Package
+`tsconfig.json`
+
+```json
+{
+ "extends": "fastify-tsconfig",
+ "compilerOptions": {
+ "outDir": "dist",
+ "declarationMap": true,
+ "composite": true
+ },
+ "include": [
+ "src/**/*.ts"
+ ]
 }
 ```
 
@@ -29,7 +64,7 @@ Check the other settings [here](./tsconfig.json)
 
 ## Configuration target
 
-The configuration targets es2018, that is supported in Node.js 10 and later. There is only one feature that is is missing from Node.js v10: [Proxy "ownKeys"](https://node.green/#ES2018) . However using es2018 as target makes some widely used features ("object rest properties", "object spread properties", and "Asynchronous Iterators") not being transpiled. To target some other version, just override `target` property.
+The configuration targets ES2022, which is supported in Node.js 16 and later. Only one feature still needs to be implemented: [RegExp Match Indices shows up in flags](https://node.green/#ES2022). However, using ES2022 as a target makes widely used features not being compiled. To target an older version, override the `target` property.
 
 ## License
 
@@ -38,3 +73,4 @@ Licensed under [MIT](./LICENSE).
 ---
 
 Inspired by: [sindresorhus/tsconfig](https://github.com/sindresorhus/tsconfig)
+
