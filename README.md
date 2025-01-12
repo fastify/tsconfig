@@ -5,7 +5,7 @@
 ## Install
 
 ```
-$ npm install --save-dev fastify-tsconfig
+$ npm i -D fastify-tsconfig
 ```
 
 ## Usage
@@ -131,7 +131,7 @@ Check the other settings [here](./tsconfig.json)
 
 ## Configuration target
 
-The configuration targets ES2022, which is supported in Node.js 16 and later. Only one feature still needs to be implemented: [RegExp Match Indices shows up in flags](https://node.green/#ES2022). However, using ES2022 as a target makes widely used features not being compiled. To target an older version, override the `target` property.
+The configuration targets ES2023, which is supported in Node.js 20 and later. However, using ES2023 as a target makes widely used features not being compiled. To target an older version, override the `target` property.
 
 ## License
 
