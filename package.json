@@ -7,6 +7,20 @@
     "type": "git",
     "url": "git+https://github.com/fastify/tsconfig.git"
   },
+  "bugs": {
+    "url": "https://github.com/fastify/tsconfig/issues"
+  },
+  "homepage": "https://github.com/fastify/tsconfig#readme",
+  "funding": [
+    {
+      "type": "github",
+      "url": "https://github.com/sponsors/fastify"
+    },
+    {
+      "type": "opencollective",
+      "url": "https://opencollective.com/fastify"
+    }
+  ],
   "author": {
     "name": "Maksim Sinik",
     "email": "maksim@sinik.it",
